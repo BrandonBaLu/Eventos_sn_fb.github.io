@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calendario de eventos</title>
+        <meta name="description" content="Eventos Sociales" />
+        <meta name="author" content=" Citlaly SaLlome Ordoñez Romero & Brandon Balderas Lucas">
+        <link rel="shortcut icon" href="/images/logo.png" />
+        <link rel="shortcut icon" href="/images/logo.png" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/css/style.css">
+        <script type="text/javascript" src="/crud/get_eventos.js"></script>
+        
+
+    </head>
+
+    <body>
+        <nav class="navbar navbar-light navbar-default">
+            <a class="navbar-brand" href="#">
+                <img src="/images/logo.png" width="90" height="70" class="d-inline-block align-top" alt="" href="/index.html">
+            </a>
+            <div class="row">
+                <div class="col-sm-4">
+                    <a href="/index.html" class="btn btn-success fa fa-home"> Inicio</a>
+                </div>
+                <div class="col-sm-4">
+                </div>
+            </div>
+            <a class="navbar-brand">
+                <h1>Calendario de eventos</h1>
+            </a>
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </nav>
+        <br>
+        <br>
+        <div class="container">
+            <div class="jumbotron jumbotron_color">
+                <p class="lead">En esta sección podrás ver los eventos que se realizarán en el mes actual.</p>
+                <hr class="my-4">
+                <p>Si deseas ver los eventos de otro mes, puedes hacerlo en la sección de "Eventos cercanos".</p>
+                <a class="btn btn-primary btn-lg" href="/templates/eventos.html" role="button">Eventos cercanos</a>
+            </div>
+            <br>
+            <br>
+            <div class="jumbotron text-center jumbotron_color">
+                <center>
+                    <div id="card_event" class="row">
+                    </div>
+                  </center>
+            </div>
+
+    </body>
+    <script async>
+        document.body.onload = getEventos();
+    </script>
+</html>
